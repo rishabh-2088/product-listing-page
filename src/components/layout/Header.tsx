@@ -4,7 +4,7 @@ import { ShoppingCart, User, Search, Heart } from 'lucide-react';
 const Header = () => {
   return (
     <header className="bg-white">
-      <div className="container mx-auto px-8 py-3 flex justify-between items-center">
+      <div className="   py-3 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Image src="/navbar-logo.svg" alt="E-Comm logo" width={51} height={44} />
           <span className="font-poppins font-bold text-2xl">E-Comm</span>

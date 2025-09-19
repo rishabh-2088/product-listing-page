@@ -13,10 +13,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${lato.variable} font-proxima bg-gray-50`}>
+         <div className="container mx-auto px-8">
         <Header />
         <div className="h-[1px]" />
         <main className="bg-white">{children}</main>
         <Footer />
+         </div>
       </body>
     </html>
   );
