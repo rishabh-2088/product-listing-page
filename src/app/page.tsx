@@ -5,7 +5,7 @@ import { mockProducts } from '@/data/mockProducts';
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-8">
       {/* This structure will hold the Sidebar and main content */}
       <div className="grid grid-cols-1"> {/* We'll update this to add a sidebar later */}
         
