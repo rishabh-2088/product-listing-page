@@ -35,7 +35,7 @@ const Footer = () => {
               <h3 className="font-poppins font-bold text-[18px] text-heading-text">E-Comm</h3>
             </div>
             <p className="font-proxima text-[12px] text-heading-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. Since the 1500s, when an unknown printer.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever. Since the 1500s, when an unknown printer.
             </p>
           </div>
           {/* Follow Us Column */}
