@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the dual-handle price slider */
+.horizontal-slider {
+  width: 100%;
+  height: 5px; 
+}
+
+.track {
+  top: 0;
+  bottom: 0;
+  border-radius: 9999px;
+}
+
+/* This is the gray part of the track outside the selected range */
+.track.track-0, 
+.track.track-2 {
+  background: #E5E7EB; 
+}
+
+/* This is the blue highlighted part between the handles */
+.track.track-1 {
+  background: #2E90E5;
+}
+
+/* This styles the round handles */
+.thumb {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background-color: #40BFFF; 
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  outline: none;
+  top: -7px; 
+}
