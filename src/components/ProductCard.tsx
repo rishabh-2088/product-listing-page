@@ -8,7 +8,7 @@ const StarRating = ({ rating }: { rating: number }) => {
   const filledStars = Math.round(rating);
 
   return (
-    <div className="flex items-center gap-x-[10px]">
+    <div className="flex items-center gap-[6px]">
       {[...Array(totalStars)].map((_, index) => {
         const starNumber = index + 1;
         return (
@@ -35,15 +35,15 @@ interface ProductCardProps {
 
 // The main ProductCard component
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  if (!product) {
-    return null;
-  }
+  if (!product) return null;
 
   return (
-    <div className="group w-[328px] h-[408px] bg-white border-[3px] border-[#F6F7F8] flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-2xl rounded-md">
-      <div className="relative w-full h-[286px] bg-[#F6F7F8]">
+    <div className="group w-[328px] h-[408px] bg-white border-[3px] border-[#F6F7F8] flex flex-col overflow-hidden rounded-[5px] transition-shadow duration-300 hover:shadow-2xl">
+      
+      {/* Product Image Section */}
+      <div className="relative w-[326px] h-[286px] bg-[#F6F7F8] mx-auto">
         {product.isHot && (
-          <div className="absolute top-0 left-0 bg-[#FF4858] text-white font-['Proxima_Nova'] text-[18px] font-normal leading-[100%] flex items-center justify-center w-[69.74px] h-[34.7px] z-10">
+          <div className="absolute top-0 left-0 w-[70px] h-[35px] bg-[#FF4858] text-white font-proxima text-[18px] font-normal leading-[100%] flex items-center justify-center z-10">
             HOT
           </div>
         )}
@@ -55,29 +55,44 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="p-4 flex flex-col flex-grow justify-start bg-white">
-        <h3 className="text-[#223263] text-[18px] font-bold leading-[150%] tracking-[0.5px] truncate h-[54px]">
+
+      {/* Product Details */}
+      <div className="px-4 pt-3 flex flex-col flex-grow justify-start">
+        <h3 className="text-[#223263] text-[18px] font-poppins font-bold leading-[150%] tracking-[0.5px] truncate">
           {product.name}
         </h3>
-        <div className="mt-[8px]">
+
+        {/* Star Rating */}
+        <div className="mt-2">
           <StarRating rating={product.ratingValue} />
         </div>
-        <div className="mt-auto flex flex-col items-start">
-          {product.discountPrice && (
-             <p className="text-[#40BFFF] text-[18px] font-bold leading-[180%] tracking-[0.5px]">
-                ${product.discountPrice.toFixed(2).replace('.', ',')}
-             </p>
-          )}
-          <div className="flex items-center gap-x-2">
-            <p className="text-[#9098B1] text-[14px] font-normal leading-[150%] tracking-[0.5px] line-through">
+
+        {/* Price Section */}
+        <div className="mt-auto flex items-center gap-[8px]">
+          {/* Current / Discounted Price */}
+          {product.discountPrice ? (
+            <p className="text-[#40BFFF] text-[18px] font-poppins font-bold leading-[180%] tracking-[0.5px]">
+              ${product.discountPrice.toFixed(2).replace('.', ',')}
+            </p>
+          ) : (
+            <p className="text-[#40BFFF] text-[18px] font-poppins font-bold leading-[180%] tracking-[0.5px]">
               ${product.price.toFixed(2).replace('.', ',')}
             </p>
-            {product.discountPercent && (
-              <p className="font-bold text-[14px] text-[#FB7181] leading-[150%] tracking-[0.5px]">
-                {product.discountPercent}% Off
-              </p>
-            )}
-          </div>
+          )}
+
+          {/* Original Price */}
+          {product.discountPrice && (
+            <p className="text-[#9098B1] text-[14px] font-poppins font-normal leading-[150%] tracking-[0.5px] line-through">
+              ${product.price.toFixed(2).replace('.', ',')}
+            </p>
+          )}
+
+          {/* Discount % */}
+          {product.discountPercent && (
+            <p className="text-[#FB7181] font-poppins font-bold text-[14px] leading-[150%] tracking-[0.5px]">
+              {product.discountPercent}% Off
+            </p>
+          )}
         </div>
       </div>
     </div>

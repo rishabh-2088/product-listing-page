@@ -1,38 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Product Listing Page
 
-## Getting Started
+A responsive Product Listing Page built with Next.js + TypeScript and styled using Tailwind CSS.
+This project demonstrates a modern e-commerce product grid with filtering, pagination, and responsive design.
 
-First, run the development server:
+🚀 Tech Stack
 
-```bash
+Framework: Next.js (React + TypeScript)
+
+Styling: Tailwind CSS
+
+State Management: React hooks / local state
+
+Icons: Lucide / Heroicons
+
+Accessibility:
+
+Keyboard navigation
+
+Focus styles
+
+Alt text for images
+
+ARIA attributes for collapsible sections
+
+Performance:
+
+Responsive images
+
+Lazy-loading where needed
+
+📂 Project Structure
+src/
+ ├─ app/
+ │   ├─ layout.tsx        # Root layout with sidebar + navbar
+ │   ├─ page.tsx          # Main product listing page
+ │   └─ globals.css       # Tailwind global styles
+ │
+ ├─ components/
+ │   └─ layout/
+ │        ├─ Navbar.tsx
+ │        ├─ Sidebar.tsx
+ │        ├─ Header.tsx
+ │        ├─ Footer.tsx
+ │        ├─ FilterSection.tsx
+ │        ├─ ProductCard.tsx
+ │        ├─ ProductToolbar.tsx
+ │        ├─ Pagination.tsx
+ │        └─ TopBanner.tsx
+ │
+ └─ data/
+      └─ mockProducts.ts   # Mock product dataset
+
+📱 Responsiveness
+
+Desktop (≥1024px) → Sidebar is always visible on the left
+
+Tablet (≥768px and <1024px) → Sidebar collapses into drawer, grid adjusts
+
+Mobile (<768px) → Sidebar is hidden, can be toggled via hamburger button
+
+Tested at:
+
+320px (mobile small)
+
+768px (tablet)
+
+1024px (desktop)
+
+⚙️ Getting Started
+
+Clone the repo:
+
+git clone https://github.com/rishabh-2088/product-listing-page.git
+cd product-listing-page
+
+
+Install dependencies:
+
+npm install
+
+
+Run development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🧪 Features
 
-## Learn More
+Product cards with responsive grid layout
 
-To learn more about Next.js, take a look at the following resources:
+Sidebar with filter options
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pagination component
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Toolbar for sorting/filter toggles
 
-## Deploy on Vercel
+Accessible, keyboard-friendly navigation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Mobile drawer sidebar with smooth animation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+📦 Build for Production
+npm run build
+npm run start
 
-Deployed on vercel
+📝 Notes
+
+Replace mockProducts.ts with a real backend API when ready.
+
+Extend ProductCard.tsx to show price, ratings, and actions.
+
+Adjust Tailwind config (tailwind.config.js) if adding custom themes.
+
+
+
+Developed as part of a Product Listing Page assignment using modern React + Next.js best practices.
