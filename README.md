@@ -3,6 +3,12 @@ Product Listing Page
 A responsive Product Listing Page built with Next.js + TypeScript and styled using Tailwind CSS.
 This project demonstrates a modern e-commerce product grid with filtering, pagination, and responsive design.
 
+
+
+
+Product-Listing_Page
+<img width="603" height="831" alt="Screenshot 2025-09-22 205232" src="https://github.com/user-attachments/assets/4a037e7b-c2d0-4109-af26-3e72530e2c9e" />
+
 🚀 Tech Stack
 
 Framework: Next.js (React + TypeScript)
@@ -29,27 +35,36 @@ Responsive images
 
 Lazy-loading where needed
 
-📂 Project Structure
 src/
- ├─ app/
- │   ├─ layout.tsx        # Root layout with sidebar + navbar
- │   ├─ page.tsx          # Main product listing page
- │   └─ globals.css       # Tailwind global styles
- │
- ├─ components/
- │   └─ layout/
- │        ├─ Navbar.tsx
- │        ├─ Sidebar.tsx
- │        ├─ Header.tsx
- │        ├─ Footer.tsx
- │        ├─ FilterSection.tsx
- │        ├─ ProductCard.tsx
- │        ├─ ProductToolbar.tsx
- │        ├─ Pagination.tsx
- │        └─ TopBanner.tsx
- │
- └─ data/
-      └─ mockProducts.ts   # Mock product dataset
+├─ app/
+│  ├─ favicon.ico              # App favicon
+│  ├─ globals.css              # Tailwind global styles
+│  ├─ layout.tsx               # Root layout with sidebar + navbar
+│  └─ page.tsx                 # Main product listing page
+│
+├─ components/
+│  └─ layout/
+│     ├─ Navbar.tsx            # Top navigation bar
+│     ├─ Sidebar.tsx           # Sidebar filter/navigation
+│     ├─ Header.tsx            # Page header
+│     ├─ Footer.tsx            # Footer section
+│     ├─ FilterSection.tsx     # Product filters (categories, price, etc.)
+│     ├─ ProductCard.tsx       # Individual product card
+│     ├─ ProductToolbar.tsx    # Toolbar with sort/view options
+│     ├─ Pagination.tsx        # Pagination component
+│     └─ TopBanner.tsx         # Promotional / hero banner
+│
+├─ data/
+│  └─ mockProducts.ts          # Mock product dataset
+│
+├─ .eslintrc.json              # ESLint config
+├─ .gitignore                  # Git ignore file
+├─ next-env.d.ts               # Next.js TypeScript types
+├─ next.config.mjs             # Next.js configuration
+├─ package.json                # Project dependencies & scripts
+├─ package-lock.json           # Dependency lockfile
+└─ postcss.config.js           # PostCSS configuration
+
 
 📱 Responsiveness
 
